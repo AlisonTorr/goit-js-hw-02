@@ -2,7 +2,9 @@ const checkForSpam = function (message) {
   const string = message.toLowerCase();
   console.log(string);
 
-  string.includes("spam", "sale") ? true : false;
+  const result = string.includes("spam", "sale") ? true : false;
+
+  return result;
 };
 
 console.log(checkForSpam("Latest technology news"));
