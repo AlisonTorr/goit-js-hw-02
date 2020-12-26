@@ -3,7 +3,8 @@ const formatString = function (string) {
   //     string = string.pop(41);
   //     }
 
-  const newString = string.pop(41);
+  const newString = string.pop(40);
+  console.log(newString);
 
   const result = string.length > 40 ? newString : string;
 
