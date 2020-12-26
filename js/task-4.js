@@ -3,7 +3,9 @@ const formatString = function (string) {
   //     string = string.pop(41);
   //     }
 
-  const result = string.length > 40 ? string.pop(41) : string;
+  const newString = string.pop(41);
+
+  const result = string.length > 40 ? newString : string;
 
   return result;
 };
