@@ -5,9 +5,8 @@ let message;
 const logItems = function (array) {
   for (let i = 1; i < pets.length; i += 1) {
     message = `${i + 1} - ${array[i]}`;
+    console.log(message);
   }
-
-  console.log(message);
 };
 
 logItems(pets);
