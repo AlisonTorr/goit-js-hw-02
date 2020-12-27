@@ -15,5 +15,9 @@ const addNumber = (input) => {
     total += number;
   }
 
-  return total;
+  let result = `Общая сумма равна ${total}`;
+
+  return result;
 };
+
+console.log(addNumber(input));
