@@ -1,12 +1,13 @@
 const formatString = function (string) {
-  //   if (string.length > 40) {
-  //     string = string.pop(41);
-  //     }
+  const result = string.length > 40 ? finalString : string;
 
-  const newString = string.splice(40);
+  const stringToArray = string.split(" ");
+  console.log(stringToArray);
+
+  const newString = stringToArray.splice(40);
   console.log(newString);
 
-  const result = string.length > 40 ? newString : string;
+  const finalString = stringToArray.splice(39, 0, "...");
 
   return result;
 };
