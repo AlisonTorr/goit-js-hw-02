@@ -7,7 +7,9 @@ const formatString = function (string) {
   const newString = stringToArray.splice(40);
   console.log(newString);
 
-  const finalString = stringToArray.splice(39, 0, "...");
+  const cutString = stringToArray.splice(39, 0, "...");
+
+  const finalString = cutString.join(" ");
 
   return result;
 };
