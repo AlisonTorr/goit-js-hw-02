@@ -7,8 +7,6 @@ const addNumber = (input) => {
   if (input !== null) {
     numbers.push(input);
     console.log(numbers);
-  } else {
-    break;
   }
 
   for (const number of numbers) {
