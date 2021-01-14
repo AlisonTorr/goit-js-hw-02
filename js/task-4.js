@@ -1,3 +1,5 @@
+let finalString;
+
 const formatString = function (string) {
   const result = string.length > 40 ? finalString : string;
 
@@ -9,7 +11,7 @@ const formatString = function (string) {
 
   const cutString = stringToArray.splice(39, 0, "...");
 
-  const finalString = cutString.join(" ");
+  finalString = cutString.join(" ");
 
   return result;
 };
