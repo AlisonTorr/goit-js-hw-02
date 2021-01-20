@@ -1,28 +1,25 @@
-let finalString;
+"use strict";
 
-const formatString = function (string) {
-  const result = string.length > 40 ? finalString : string;
+const credits = 23580;
+const pricePerDroid = 3000;
 
-  const stringToArray = string.split(" ");
-  console.log(stringToArray);
+let message;
 
-  const newString = stringToArray.splice(40);
-  console.log(newString);
+let totalPrice;
+let creditBalance;
 
-  const cutString = stringToArray.splice(39, 0, "...");
+let purchasedDroidNumber = prompt("Введите количество дроидов к покупке");
+purchasedDroidNumber = Number(purchasedDroidNumber);
 
-  finalString = cutString.join(" ");
-  console.log(finalString);
+totalPrice = pricePerDroid * purchasedDroidNumber;
 
-  return result;
-};
+if (purchasedDroidNumber === null) {
+  message = "Отменено пользователем!";
+} else if (credits < totalPrice) {
+  message = "Недостаточно средств на счету!";
+} else {
+  creditBalance = credits - totalPrice;
+  message = `Вы купили ${purchasedDroidNumber} дроидов, на счету осталось ${creditBalance} кредитов.`;
+}
 
-console.log(formatString("Curabitur ligula sapien, tincidunt non."));
-
-console.log(formatString("Curabitur ligula sapien."));
-
-console.log(
-  formatString(
-    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
-  )
-);
+alert(message);
