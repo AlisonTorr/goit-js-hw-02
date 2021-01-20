@@ -1,21 +1,25 @@
-const numbers = [];
+"use strict";
+
 let total = 0;
+let input;
 
-let input = prompt("Введите число");
+while (true) {
+  input = prompt("Введите число");
 
-const addNumber = (input) => {
-  if (input !== null) {
-    numbers.push(input);
-    console.log(numbers);
+  if (input === null) {
+    break;
   }
 
-  for (const number of numbers) {
-    total += number;
+  input = Number(input);
+
+  const notANumber = Number.isNaN(input);
+
+  if (notANumber) {
+    alert("Было введено не число, попробуйте еще раз");
+    continue;
   }
 
-  let result = `Общая сумма равна ${total}`;
+  total += input;
+}
 
-  return result;
-};
-
-console.log(addNumber(input));
+alert(`Общая сумма чисел равна ${total}`);
